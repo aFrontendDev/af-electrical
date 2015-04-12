@@ -1,0 +1,29 @@
+---
+component: promo-a
+hide: true
+published: false
+---
+
+<article class="promo-box {{class}} toggle">
+    <header class="promo-box-header">
+        <h2 class="promo-box-title">{{title}}</h2>
+        <div class="promo-box-header-media">
+            <img src="{{headerImg}}" alt="{{headerImgAlt}}" />
+            <a href="#" class="helper toggle-handle">
+                {{{helper}}}
+            </a>
+        </div>
+    </header>
+    <div class="promo-box-body toggle-content">
+        <p>
+            {{bodyText}}
+        </p>
+        {{#if bodyList}}
+        <ul>
+            {{#each bodyList}}
+            <li>{{item}}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+</article>

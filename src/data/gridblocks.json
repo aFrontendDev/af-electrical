@@ -1,0 +1,22 @@
+{
+	"a": {
+		"size": "a",
+		"description": "100% width at all break points."
+	},
+	"b": {
+		"size": "b",
+		"description": "100% width up to breakpoint-d (768px). 65% width from breakpoint-d (768px) up."
+	},
+	"c": {
+		"size": "c",
+		"description": "100% width up to breakpoint-d (768px). 33% width from breakpoint-d (768px) up."
+	},
+	"d": {
+		"size": "d",
+		"description": "100% width up to breakpoint-d (768px). 25% width from breakpoint-d (768px) up."
+	},
+	"e": {
+		"size": "e",
+		"description": "100% width up to breakpoint-d (768px). 50% width from breakpoint-d (768px) up."
+	}
+}

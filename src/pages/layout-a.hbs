@@ -1,0 +1,24 @@
+---
+title: Layout A
+scaffolding: true
+visibleGrid: false
+visibleBreakpoints: true
+---
+{{#extend "layout-a"}}
+	{{#content "region-a"}}
+		<h2>Region A <small>(.region-a)</small></h2>
+
+		{{>gridblock gridblocks.a}}
+		{{>gridblock gridblocks.b}}
+		{{#repeat 4}}
+			{{>gridblock gridblocks.c}}
+		{{/repeat}}
+		{{#repeat 4}}
+			{{>gridblock gridblocks.d}}
+		{{/repeat}}
+		{{>gridblock gridblocks.e}}
+		{{>gridblock gridblocks.e}}
+
+
+	{{/content}}
+{{/extend}}

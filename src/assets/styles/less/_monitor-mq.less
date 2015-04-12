@@ -72,7 +72,15 @@
 		width: @break-point-g-px;
 
 		.visible-breakpoints &:after {
-			content: '@break-point-g +';
+			content: '@break-point-g';
+		}
+	}
+
+	@media (min-width: @break-point-h) {
+		width: @break-point-h-px;
+
+		.visible-breakpoints &:after {
+			content: '@break-point-h +';
 		}
 	}
 }

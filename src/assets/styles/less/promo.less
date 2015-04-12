@@ -1,0 +1,54 @@
+// promo.less
+
+.promo-box {
+
+    &.promo-box-style-a {}
+
+    &.promo-box-color-a {
+
+    }
+
+    &.promo-box-color-b {
+
+    }
+}
+
+.promo-box-header {
+    position: relative;
+}
+
+.promo-box-title {
+    position: absolute;
+    padding: @vr*2 @ggw;
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+
+    .promo-box-color-a & {
+        background: rgba(1, 149, 255, 0.6);
+    }
+
+    .promo-box-color-b & {
+        background: rgba(255, 242, 1, 0.6);
+    }
+}
+
+.promo-box-header-media {
+
+    img {
+
+    }
+
+    .helper {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 0;
+    }
+}
+
+.promo-box-body {
+
+     p {
+
+     }
+}

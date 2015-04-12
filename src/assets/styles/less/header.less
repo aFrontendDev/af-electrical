@@ -1,1 +1,67 @@
 // header.less
+
+.header {
+    padding: @vr*3 0;
+    background-color: @brand-color-a;
+    margin-bottom: @vr*4;
+    border-bottom: @vr solid @brand-color-b;
+    .clearfix();
+
+    & + .hero {
+        margin-top: -@vr*4;
+    }
+}
+
+.header-inner {
+    margin: 0 @ggw/2;
+
+    @media (min-width: @break-point-b) {
+        margin: 0 @ggw
+    }
+
+    @media (min-width: @break-point-h) {
+        margin: 0 auto;
+        max-width: @max-width;
+    }
+}
+
+.header-logo {
+    margin-bottom: 0;
+    letter-spacing: 3px;
+    float: left;
+
+    a {
+        color: #fff;
+    }
+}
+
+.header-info {
+    float: right;
+
+    a {
+        
+    }
+}
+
+// header-nav
+.navigation {
+    float: right;
+
+    .navigation-title {
+        .visually-hidden();
+    }
+
+    .navigation-menu {
+
+        li {
+            display: inline-block;
+            margin-right: @ggw/3;
+            font-family: @asap-medium;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -11,10 +11,14 @@
 .layout {
 	.clearfix();
 	position: relative;
-	margin: 0 @ggw;
+	margin: 0 @ggw/2;
 	max-width: @max-width;
 
-	@media (min-width: @break-point-f) {
+	@media (min-width: @break-point-b) {
+		margin: 0 @ggw;
+	}
+
+	@media (min-width: @break-point-h) {
 		margin: 0 auto;
 	}
 }
@@ -116,6 +120,20 @@
 			.fluid-width((@gcw*8) + (@ggw*7), @region-inner-width);
 		}
 	}
+
+	.block-size-d {
+
+		@media (min-width: @break-point-d) {
+			.fluid-width((@gcw*6) + (@ggw*5), @region-inner-width);
+		}
+	}
+
+	.block-size-e {
+
+		@media (min-width: @break-point-d) {
+			.fluid-width((@gcw*12) + (@ggw*11), @region-inner-width);
+		}
+	}
 }
 
 .region-a {
@@ -215,5 +233,18 @@
 	.block {
 		.rgba-bg(@brand-color-a, .5);
 		color: #FFF;
+	}
+}
+
+//styleguide stuff
+
+.gridblock {
+	background: @brand-color-a;
+	color: #FFF;
+	padding: @vr*2 @vr*3;
+	text-align: center;
+
+	p {
+		margin: 0;
 	}
 }

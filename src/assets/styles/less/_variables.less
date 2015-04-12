@@ -1,8 +1,8 @@
 // variables.less
 
 // Primary Palette
-@brand-color-a: #ED1C24;
-@brand-color-b: #00A650;
+@brand-color-a: #0351A9; // dark blue
+@brand-color-b: #E8D50A; // yellow
 @brand-color-c: #2056AE;
 @brand-color-d: #FABC09;
 
@@ -25,6 +25,15 @@
 @color-text: #333;
 
 // Typography
+@bebas-regular: "bebas_neue_regularregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@bebas-light: "bebas_neuelight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@bebas-bold: "bebas_neuebold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@bebas-book: "bebas_neuebook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@asap-regular: "asapregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@asap-medium: "asapmedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@asap-bold: "asapbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif: "Georgia Pro", Georgia, Times, serif;
 @font-family-mono: "Anonymous Pro", "Droid Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, "Lucida Console", Courier, monospace;
@@ -42,7 +51,7 @@
 @font-weight-light: 100; // 100 when not using @font-face
 
 // Dimensions
-@max-width: 1180px; // overall max width
+@max-width: 1650px; // overall max width
 @font-size-html: 100%;
 @rem-base: 16px; // 100% browser default font size
 @vertical-rhythm: 6px; // use @vr*X to maintain vertical consistency
@@ -50,9 +59,9 @@
 
 // Grid system
 @grid-columns: 24;
-@grid-column-width: 30px;
+@grid-column-width: 40px;
 @gcw: @grid-column-width; // Alias
-@grid-gutter-width: 20px;
+@grid-gutter-width: 30px;
 @ggw: @grid-gutter-width; // Alias
 @grid-total-width: 100%;
 @grid-gridsystem-width: (@gcw*@grid-columns) + (@ggw*@grid-columns) * 1px;
@@ -113,3 +122,9 @@
 @break-point-g-em: ~"@{break-point-g-em-val}em";
 // Set to -px or -em
 @break-point-g: @break-point-g-em;
+
+@break-point-h-px: @max-width;
+@break-point-h-em-val: ~`parseInt("@{break-point-h-px}", 10) / parseInt("@{rem-base}", 10)`;
+@break-point-h-em: ~"@{break-point-h-em-val}em";
+// Set to -px or -em
+@break-point-h: @break-point-h-em;
