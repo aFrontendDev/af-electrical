@@ -18,5 +18,9 @@
 	"e": {
 		"size": "e",
 		"description": "100% width up to breakpoint-d (768px). 50% width from breakpoint-d (768px) up."
+	},
+	"f": {
+		"size": "f",
+		"description": "100% width up to breakpoint-d (768px). 65% width from breakpoint-d (768px) up, centered."
 	}
 }

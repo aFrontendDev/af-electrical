@@ -2,8 +2,8 @@
   "name": "AF-Electrical",
   "title": "AF Electrical",
   "description": "AF Electrical website",
-  "version": "0.1",
-  "private": false,
+  "version": "0.0.1",
+  "private": true,
   "homepage": "https://github.com/grumpydev22/af-electrical",
   "authors": [
     "GrumpyDev (https://github.com/grumpydev22)"
@@ -67,7 +67,7 @@
     "postinstall": "bower install"
   },
   "frontend": {
-    "name": "BB Prototype Website",
+    "name": "AF-Electrical",
     "stylesheets": "src/assets/styles",
     "javascripts": "src/assets/scripts"
   }
