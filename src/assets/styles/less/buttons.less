@@ -150,13 +150,25 @@ button::-moz-focus-inner {
 }
 
 .btn-style-d {
-	background-color: @brand-color-d;
-	border-color: @brand-color-d;
-	color: #FFF;
+	background-color: #fff;
+	border-color: @brand-color-c;
+	color: @brand-color-c;
 
 	&:hover,
 	&:focus {
-		background: lighten(@brand-color-d, 10%);
+		//background: lighten(@brand-color-d, 10%);
+		border-color: lighten(@brand-color-c, 10%);
+	}
+}
+
+.btn-style-e {
+	background-color: #fff;
+	border-color: @brand-color-d;
+	color: @brand-color-d;
+
+	&:hover,
+	&:focus {
+		background: lighten(#fff, 10%);
 		border-color: lighten(@brand-color-d, 10%);
 	}
 }

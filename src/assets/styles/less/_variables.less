@@ -3,8 +3,8 @@
 // Primary Palette
 @brand-color-a: #0351A9; // dark blue
 @brand-color-b: #E8D50A; // yellow
-@brand-color-c: #2056AE;
-@brand-color-d: #FABC09;
+@brand-color-c: #515048; // dark grey
+@brand-color-d: #2A7EDD; // blue
 
 // Secondary Palette
 @brand-color-e: #434041;
@@ -34,7 +34,7 @@
 @asap-medium: "asapmedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @asap-bold: "asapbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif: @asap-regular;
 @font-family-serif: "Georgia Pro", Georgia, Times, serif;
 @font-family-mono: "Anonymous Pro", "Droid Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, "Lucida Console", Courier, monospace;
 @font-family-base: @font-family-sans-serif;
@@ -45,16 +45,26 @@
 @line-height-base: @vr*4; // 24px
 @line-height-small: @vr*3; // 18px
 
+@font-weight-ultra: 900; // 900 when not using @font-face
+@font-weight-extrabold: 800; // 800 when not using @font-face
 @font-weight-bold: 700; // 700 when not using @font-face
-@font-weight-medium: 600; // 600 when not using @font-face
+@font-weight-semibold: 600; // 600 when not using @font-face
+@font-weight-medium: 500; // 500 when not using @font-face
 @font-weight-regular: 400; // 400 when not using @font-face
-@font-weight-light: 100; // 100 when not using @font-face
+@font-weight-light: 300; // 400 when not using @font-face
+@font-weight-thin: 100; // 100 when not using @font-face
+
+// Settings
+@icon-prefix: ~'icon';
+@icon-social-prefix: ~'icon-social';
+@directory-images: "../images/css";
+@directory-fonts: "fonts";
 
 // Dimensions
 @max-width: 1650px; // overall max width
 @font-size-html: 100%;
 @rem-base: 16px; // 100% browser default font size
-@vertical-rhythm: 6px; // use @vr*X to maintain vertical consistency
+@vertical-rhythm: 5px; // use @vr*X to maintain vertical consistency
 @vr: @vertical-rhythm; // Alias
 
 // Grid system

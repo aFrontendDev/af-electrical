@@ -1,71 +1,105 @@
 (function($) {
 
-	// Default validator settings
-	var settings = {
-		// highlight and unhighlight elemnts with the sames 'name' attribute
-		highlight: function(element, errorClass, validClass) {
-			$(element).closest('form').find("[name='" + element.name + "']").addClass(errorClass).removeClass(validClass);
-		},
-		unhighlight: function(element, errorClass, validClass) {
-			$(element).closest('form').find("[name='" + element.name + "']").removeClass(errorClass).addClass(validClass);
-		}
-	};
+	// 'checkDates' - check 'date a' against 'date b' to check b is after a
+	$.validator.addMethod('checkdates', function(value, element, parameters) {
+		var dateAId = '#' + parameters['startdateinput'];
+		var $dateA = $(dateAId);
+		var dateAVal = $dateA.val();
+		var dateBVal = value;
 
-	if ($.validator) {
-		$.validator.setDefaults(settings);
-	}
+		if (dateAVal < dateBVal) {
+			return true;
+		} else {
+			return false;
+		}
+	});
 
 	// 'required if' certain field has any value
 	$.validator.addMethod('requiredif', function(value, element, parameters) {
 		var id = "#" + parameters["dependentupon"],
-			control = $(id);
+			control = $(id),
+			matchValue = parameters["val"];
 		if (!control.length) {
-			control = $('input[name=' + parameters["dependentupon"] + ']');
+			control = $('[name="' + parameters["dependentupon"] + '"]');
 		}
+		console.log(parameters["dependentupon"]  + ' ' + control.length);
 		if (!control.length) {
 			return false;
 		}
-		var controlType = control.eq(0).attr('type'),
-			dependentVal = null;
-		if (controlType == 'checkbox' && control.length > 1) {
-			dependentVal = control.is(':checked').val().toString();
-		} else if (controlType == 'checkbox' && control.length == 1) {
-			dependentVal = control.is(':checked').toString();
-		} else if (controlType == 'radio') {
-			dependentVal = control.filter(':checked').val().toString();
+		var controlType = control.eq(0).attr('type');
+		var actualValue = false;
+		if (control.is('select')) {
+			actualValue = control.find(':selected').attr('value');
+		} else if (controlType === 'checkbox' && control.length > 1) {
+			actualValue = control.is(':checked').val();
+		} else if (controlType === 'checkbox' && control.length === 1) {
+			actualValue = control.is(':checked');
+		} else if (controlType === 'radio') {
+			actualValue = control.filter(':checked').val();
 		} else {
-			dependentVal = control.val();
+			actualValue = control.val();
 		}
-		if (dependentVal) {
+		if ((matchValue && actualValue) && (matchValue === actualValue)) {
+			console.log('value matches');
+			actualValue = true;
+		} else if (matchValue && actualValue) {
+			console.log('value does not match');
+			actualValue = false;
+		}
+		if (actualValue) {
 			return $.validator.methods.required.call(this, value, element, parameters);
 		}
 		return true;
 	});
 
-	// 'required if' certain field has a 'specific value'
-	$.validator.addMethod('requiredifvalue', function(value, element, parameters) {
-		var id = "#" + parameters["dependentupon"];
-		var targetValue = parameters["targetvalue"];
-		targetValue = (targetValue === null ? '' : targetValue).toString();
-		var control = $(id);
+	// 'required if not' certain field has any value
+	$.validator.addMethod('requiredifnot', function(value, element, parameters) {
+		var id = "#" + parameters["dependentupon"],
+			control = $(id),
+			matchValue = parameters["val"];
 		if (!control.length) {
-			control = $('input[name=' + parameters["dependentupon"] + ']');
+			control = $('[name="' + parameters["dependentupon"] + '"]');
 		}
 		if (!control.length) {
 			return false;
 		}
 		var controlType = control.eq(0).attr('type');
-		var actualValue;
-		if (controlType == 'checkbox' && control.length > 1) {
-			actualValue = control.is(':checked').val().toString();
-		} else if (controlType == 'checkbox' && control.length == 1) {
-			actualValue = control.is(':checked').toString();
-		} else if (controlType == 'radio') {
-			actualValue = control.filter(':checked').val().toString();
+		var actualValue = false;
+		if (control.is('select')) {
+			actualValue = control.find(':selected').attr('value');
+		} else if (controlType === 'checkbox' && control.length > 1) {
+			actualValue = control.is(':checked').val();
+		} else if (controlType === 'checkbox' && control.length === 1) {
+			actualValue = control.is(':checked');
+		} else if (controlType === 'radio') {
+			actualValue = control.filter(':checked').val();
 		} else {
 			actualValue = control.val();
 		}
-		if (targetValue === actualValue) {
+		if ((matchValue && actualValue) && (matchValue === actualValue)) {
+			console.log('value matches');
+			actualValue = true;
+		} else if (matchValue && actualValue) {
+			console.log('value does not match');
+			actualValue = false;
+		}
+		if (!actualValue) {
+			return $.validator.methods.required.call(this, value, element, parameters);
+		}
+		return true;
+	});
+
+	// 'required if btn' is submitted by specific button
+	$.validator.addMethod('requiredifbtn', function(value, element, parameters) {
+		var id = "#" + parameters["dependentupon"],
+			$control = $(id);
+		if (!$control.length) {
+			return false;
+		}
+		var $form = $(element).closest('form');
+		var $submitButton = $($form.data('validator').submitButton);
+		var match = (parameters["dependentupon"] === $submitButton.attr('id'));
+		if (match) {
 			return $.validator.methods.required.call(this, value, element, parameters);
 		}
 		return true;
@@ -82,7 +116,7 @@
 			minimum = 0;
 		}
 		if (elementsName) {
-			$elements = $('[name=' + elementsName + ']');
+			$elements = $('[name="' + elementsName + '"]');
 		} else {
 			return false;
 		}
@@ -102,6 +136,31 @@
 			return false;
 		}
 	});
+
+	// $.validator.addMethod("allrequired", function(value, element, parameters) {
+	// 	var self = this,
+	// 		$element = $(element),
+	// 		$elements = $(parameters["dependentupon"]),
+	// 		inputsValid = 0;
+	// 	$elements.each( function (index, item) {
+	// 		//var valid = $(item).valid();
+	// 		//var valid = false;
+	// 		var $item = $(item);
+	// 		//var isValid = $.validator.methods.required.call(item, $item.val(), item, parameters);
+	// 		var isValid = $item.valid();
+	// 		console.log($item.attr('id'));
+	// 		console.log(isValid);
+	// 		if (isValid) {
+	// 			inputsValid++;
+	// 		}
+	// 	});
+	// 	console.log(inputsValid + ' ' + $elements.length);
+	// 	if (inputsValid === $elements.length) {
+	// 		return true;
+	// 	} else {
+	// 		return false;
+	// 	}
+	// }, "{0}");
 
 	$.validator.addMethod("phone", function(value, element) {
 		return this.optional(element) || /^[0-9 (+)]+$/.test(value);
