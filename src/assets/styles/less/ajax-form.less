@@ -1,0 +1,40 @@
+// ajax-form.less
+
+.ajax-form {
+
+}
+
+.ajax-form-area {
+
+}
+
+.ajax-form-response {
+	transition: opacity 300ms, transform 300ms, ease-in-out;
+	opacity: 0;
+	transform: scale(0);
+	display: none;
+
+	&.ajax-form-response-show {
+		display: block;
+	}
+
+	&.ajax-form-response-in {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.ajax-form-response-title {
+
+	&.ajax-form-success-title {
+	}
+
+	&.ajax-form-error-title {
+	}
+
+	&.ajax-form-success-icon {
+	}
+
+	&.ajax-form-error-icon {
+	}
+}

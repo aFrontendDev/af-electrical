@@ -1197,11 +1197,6 @@ select,
 			.fluid-width((@gcw*3) + (@ggw*2), @max-width);
 			padding-top: @vr;
 			text-align: right;
-
-			.html-rtl & {
-				float: right;
-				text-align: left;
-			}
 		}
 	}
 
@@ -1212,11 +1207,6 @@ select,
 		@media (min-width: @break-point-d) {
 			.fluid-margin-left((@gcw*3) + (@ggw*3), @max-width);
 			clear: none;
-
-			.html-rtl & {
-				margin-left: 0;
-				.fluid-margin-right((@gcw*3) + (@ggw*3), @max-width);
-			}
 		}
 
 		> .btn {
@@ -1418,12 +1408,55 @@ select,
 	}
 }
 
-.form-style-a {
-
-}
-
 .form-style-b {
+	float: left;
+	width: 100%;
+	color: #fff;
+	padding: @vr*2 @ggw/3;
 
+	@media (min-width: @break-point-d) {
+		padding: @vr*4 @ggw;
+	}
+
+	.control-label {
+		color: #fff;
+	}
+
+	// Float the labels left
+	.control-label {
+
+		@media (min-width: @break-point-d) {
+			float: left;
+			.fluid-width((@gcw*6) + (@ggw*5), @max-width);
+			padding-top: @vr;
+			text-align: right;
+		}
+	}
+
+	// Move over all input controls and content
+	.controls {
+		.clearfix();
+
+		@media (min-width: @break-point-d) {
+			.fluid-margin-left((@gcw*6) + (@ggw*6), @max-width);
+			clear: none;
+		}
+
+		> .btn {
+
+			&:first-child {
+				margin-top: @vr;
+			}
+		}
+	}
+
+	.form-actions {
+
+		@media (min-width: @break-point-d) {
+			.fluid-margin-left((@gcw*6) + (@ggw*6), @max-width);
+			clear: none;
+		}
+	}
 }
 
 .form-section-container {

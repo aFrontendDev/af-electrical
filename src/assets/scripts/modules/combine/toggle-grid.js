@@ -21,7 +21,7 @@
 			bb.settings.$body.append($btn);
 
 			$btn.on('click', function (event) {
-				bb.settings.$body.toggleClass('visible-grid');
+				bb.settings.$body.toggleClass('visible-grid-in');
 			});
 		}
 	});

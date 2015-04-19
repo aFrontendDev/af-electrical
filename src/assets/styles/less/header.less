@@ -5,6 +5,9 @@
     background-color: @brand-color-a;
     margin-bottom: @vr*4;
     border-bottom: @vr solid @brand-color-b;
+    box-shadow: @box-shadow-b;
+    position: relative;
+    z-index: 1;
     .clearfix();
 
     & + .hero {
@@ -13,6 +16,9 @@
 }
 
 .header-inner {
+    .clearfix();
+    position: relative;
+    max-width: @max-width;
     margin: 0 @ggw/2;
 
     @media (min-width: @break-point-b) {
@@ -25,33 +31,78 @@
     }
 }
 
+.header-inner-container {
+    display: table;
+    width: 100%;
+}
+
 .header-logo {
+    font-size: 18px;
+    line-height: @vr*4;
     margin-bottom: 0;
-    letter-spacing: 3px;
-    float: left;
+    //letter-spacing: 3px;
+    //float: left;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    @media (min-width: @break-point-e) {
+        font-size: 36px;
+        line-height: @vr*8;
+    }
 
     a {
         color: #fff;
     }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+        max-height: 30px;
+        margin-right: @ggw/3;
+
+        @media (min-width: @break-point-d) {
+            max-height: 50px;
+            margin-right: @ggw/2;
+        }
+    }
 }
 
 .header-info {
-    float: right;
+    //float: right;
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
 
     a {
-        
+
     }
 }
 
 // header-nav
 .navigation {
-    float: right;
+    display: none;
+    //float: right;
+
+    @media (min-width: @break-point-d) {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+    }
 
     .navigation-title {
         .visually-hidden();
     }
 
     .navigation-menu {
+        padding: 0;
+        font-size: 14px;
+        line-height: @vr*3;
+
+        @media (min-width: @break-point-e) {
+            font-size: 16px;
+        }
 
         li {
             display: inline-block;
@@ -63,5 +114,20 @@
                 color: #fff;
             }
         }
+    }
+}
+
+.burger-menu {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    @media (min-width: @break-point-d) {
+        display: none;
     }
 }

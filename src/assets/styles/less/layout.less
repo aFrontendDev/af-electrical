@@ -51,7 +51,7 @@
 	float: left;
 	width: 100%;
 	max-width: 100%;
-	margin-bottom: @vr*3;
+	margin-bottom: @vr*4;
 
 	.rtl & {
 		float: right;
@@ -240,8 +240,11 @@
 .visible-grid {
 
 	.block {
-		.rgba-bg(@brand-color-a, .5);
-		color: #FFF;
+
+		.visible-grid-in& {
+			.rgba-bg(@brand-color-a, .5);
+			color: #FFF;
+		}
 	}
 }
 

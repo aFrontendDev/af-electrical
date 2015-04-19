@@ -1,0 +1,124 @@
+---
+component: cta-a
+hide: true
+published: false
+---
+
+<article class="cta {{class}}">
+    <header class="cta-header">
+        <h2 class="cta-title">{{{title}}}</h2>
+    </header>
+    <div class="cta-body">
+
+        <div class="cta-detail">
+            <p>{{{bodyCopy}}}</p>
+
+            {{#if detailLinks}}
+            <div class="cta-detail-links">
+            	{{#each detailLinks.link}}
+	            <a href="{{href}}">{{{text}}}</a><span class="seperator"> | </span>
+	            {{/each}}
+	        </div>
+	        {{/if}}
+        </div>
+
+        <div class="btn-container">
+            <button class="btn {{ctaBtn.class}}">{{{ctaBtn.text}}}</button>
+        </div>
+
+        {{#if ctaToggle}}
+        <div class="toggle-content">
+        	<div class="toggle-content-inner">
+        {{/if}}
+        	{{#if ctaForm}}
+            <div class="contact-form form {{#if ctaForm.ajax}}ajax-form{{/if}} {{ctaForm.class}}">
+
+            	{{#if ctaForm.ajax}}
+            	<div class="ajax-form-area">
+            	{{/if}}
+	                <form id="{{ctaForm.id}}" name="{{ctaForm.name}}" action="{{ctaForm.action}}" method="{{ctaForm.method}}">
+		               	<div class="control-group control-group-odd">
+		                	<div class="control-label">
+								<label for="name_input">Your name</label>
+							</div>
+							<div class="controls">
+								<input class="input-large" type="text" placeholder="e.g. John Smith" id="name_input" name="name_input" data-val="true" data-val-required="Please enter your name" />
+								<span class="field-validation-message field-validation-valid" data-valmsg-for="name_input" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="control-group control-group-even">
+		                	<div class="control-label">
+								<label for="contact_number_input">Your number</label>
+							</div>
+							<div class="controls">
+								<input class="input-large" type="text" placeholder="e.g. 07970123456" id="contact_number_input" name="contact_number_input" data-val="true" data-val-required="Please enter a contact phone number" />
+								<span class="field-validation-message field-validation-valid" data-valmsg-for="contact_number_input" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="control-group control-group-odd">
+		                	<div class="control-label">
+								<label for="contact_email_input">Your email (optional)</label>
+							</div>
+							<div class="controls">
+								<input class="input-large" type="text" placeholder="e.g. johnsmith@gmail.com" id="contact_email_input" name="contact_email_input" />
+							</div>
+						</div>
+						<div class="control-group control-group-even">
+							<div class="control-label">
+								<label for="contact_service_select">Type of service required</label>
+							</div>
+							<div class="controls">
+								<select class="input-large" name="contact_service_select" id="contact_service_select" data-val="true" data-val-required="Please select the type of service you require">
+									<option value="">Please select an option&hellip;</option>
+									<option value="commercial">Commercial</option>
+									<option value="domestic">Domestic</option>
+								</select>
+								<span class="field-validation-message field-validation-valid" data-valmsg-for="contact_service_select" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="control-group control-group-odd">
+							<div class="control-label">
+								<label for="contact_service_info_text">Tell me about the work you require</label>
+							</div>
+							<div class="controls">
+								<textarea class="input-xxxlarge" id="contact_service_info_text" name="contact_service_info_text" rows="3" cols="10" data-val="true" data-val-required="Please give me a little information on the work you need to be done"></textarea>
+								<span class="field-validation-message field-validation-valid" data-valmsg-for="contact_service_info_text" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn {{ctaForm.submitBtnClass}}">{{{ctaForm.submitBtnText}}}</button>
+						</div>
+	                </form>
+	            {{#if ctaForm.ajax}}
+	        	</div>
+	        	{{/if}}
+
+	        	{{#if ctaForm.ajax}}
+	            <div class="ajax-form-response ajax-form-success">
+	            	<h3 class="ajax-form-response-title">{{{ctaForm.ajax.success.title}}}</h3>
+	            	<p>
+	            		{{{ctaForm.ajax.success.message}}}
+	            	</p>
+	            	<div class="ajax-form-response-icon">
+	            		<i class="icon {{ctaForm.ajax.success.icon}}"></i>
+	            	</div>
+	            </div>
+	            <div class="ajax-form-response ajax-form-error">
+	            	<h3 class="ajax-form-response-title">{{{ctaForm.ajax.error.title}}}</h3>
+	            	<p>
+	            		{{{ctaForm.ajax.error.message}}}
+	            	</p>
+	            	<div class="ajax-form-response-icon">
+	            		<i class="icon {{ctaForm.ajax.error.icon}}"></i>
+	            	</div>
+	            </div>
+	            {{/if}}
+
+            </div>
+            {{/if}}
+        {{#if ctaToggle}}
+    		</div>
+        </div>
+        {{/if}}
+    </div>
+</article>

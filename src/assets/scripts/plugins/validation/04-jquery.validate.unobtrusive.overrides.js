@@ -8,8 +8,12 @@
 				$allElements = $element.closest('form').find("[name='" + element.name + "']");
 			$allElements.each( function () {
 				var $this = $(this),
-					isReplacedSelect = ($this.is('select') && $this.parent().hasClass('select-replace')) ? true : false;
+					isReplacedSelect = ($this.is('select') && $this.parent().hasClass('select-replace')) ? true : false,
+					isReplacedDatePicker = ($this.is('input[type="date"]') && $this.parent().hasClass('date-replace')) ? true : false;
 				if (isReplacedSelect) {
+					$this.parent().addClass(errorClass + '-replace').removeClass(validClass + '-replace');
+				}
+				if (isReplacedDatePicker) {
 					$this.parent().addClass(errorClass + '-replace').removeClass(validClass + '-replace');
 				}
 				$this.addClass(errorClass).removeClass(validClass);
@@ -20,8 +24,12 @@
 				$allElements = $element.closest('form').find("[name='" + element.name + "']");
 			$allElements.each( function () {
 				var $this = $(this),
-					isReplacedSelect = ($this.is('select') && $this.parent().hasClass('select-replace')) ? true : false;
+					isReplacedSelect = ($this.is('select') && $this.parent().hasClass('select-replace')) ? true : false,
+					isReplacedDatePicker = ($this.is('input[type="date"]') && $this.parent().hasClass('date-replace')) ? true : false;
 				if (isReplacedSelect) {
+					$this.parent().removeClass(errorClass + '-replace').addClass(validClass + '-replace');
+				}
+				if (isReplacedDatePicker) {
 					$this.parent().removeClass(errorClass + '-replace').addClass(validClass + '-replace');
 				}
 				$this.removeClass(errorClass).addClass(validClass);

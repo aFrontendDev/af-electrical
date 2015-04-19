@@ -1,8 +1,7 @@
 // promo.less
 
 .promo-box {
-
-    &.promo-box-style-a {}
+    box-shadow: @box-shadow-a;
 
     &.promo-box-color-a {
 
@@ -18,10 +17,18 @@
 }
 
 .promo-box-title {
-    position: absolute;
     padding: @vr*2 @ggw;
     background: rgba(255, 255, 255, 0.6);
     width: 100%;
+    font-size: 24px;
+    line-height: @vr*5;
+    margin-bottom: 0;
+
+    @media (min-width: @break-point-d) {
+        position: absolute;
+        font-size: 40px;
+        line-height: @vr*8;
+    }
 
     .promo-box-color-a & {
         background: rgba(1, 149, 255, 0.6);
@@ -37,13 +44,6 @@
     img {
 
     }
-
-    .helper {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        bottom: 0;
-    }
 }
 
 .promo-box-body {
@@ -51,4 +51,13 @@
      p {
 
      }
+}
+
+.helper {
+    // position: absolute;
+    // width: 100%;
+    // text-align: center;
+    // bottom: 0;
+    width: 100%;
+    text-align: center;
 }

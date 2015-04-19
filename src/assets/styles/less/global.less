@@ -14,7 +14,7 @@
 
 html {
 	font-size: 100%;
-	background: #fff;
+	background: @brand-color-e;
 	-webkit-overflow-scrolling: touch;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -52,7 +52,11 @@ img {
 		bottom: 0;
 		z-index: 1001;
 		background: rgba(0,0,0,0);
-		display: block;
+		display: none;
+
+		.visible-grid-in& {
+			display: block;
+		}
 
 		body:hover & {
 			z-index: 0;
@@ -66,8 +70,11 @@ img {
 		}
 
 		.block {
-			background: red;
-			opacity: 0.1;
+
+			.visible-grid-in& {
+				background: red;
+				opacity: 0.1;
+			}
 		}
 	}
 }

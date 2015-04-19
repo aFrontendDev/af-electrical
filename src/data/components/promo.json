@@ -2,9 +2,12 @@
     "promoA": {
         "class": "promo-box-style-a promo-box-color-a block block-size-e",
         "title": "Domestic Services",
-        "headerImg": "temp/1600x900.gif",
+        "headerImg": "temp/domestic.jpg",
         "headerImgAlt": "alt text",
-        "helper": "Click to reveal more info&hellip;",
+        "helper": {
+            "out": "Click to reveal more info",
+            "in": "Click to hide info"
+        },
         "bodyText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "bodyList": [
             {
@@ -30,9 +33,12 @@
     "promoB": {
         "class": "promo-box-style-a promo-box-color-b block block-size-e",
         "title": "Commercial Services",
-        "headerImg": "temp/1600x900.gif",
+        "headerImg": "temp/commercial.jpg",
         "headerImgAlt": "alt text",
-        "helper": "Click to reveal more info&hellip;",
+        "helper": {
+            "out": "Click to reveal more info",
+            "in": "Click to hide info"
+        },
         "bodyText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "bodyList": [
             {

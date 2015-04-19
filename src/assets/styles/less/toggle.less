@@ -38,16 +38,43 @@
 }
 
 .toggle-content {
+	overflow: hidden;
+	transition: height 100ms ease-in-out;
 
 	.js & {
-		display: none;
+		height: 0;
 	}
 
 	.toggle-in & {
-		display: block;
+		overflow: visible;
+	}
+
+	.toggle-show & {
+	}
+
+	.toggle-content-inner {
+		transition: transform 300ms, opacity 300ms, ease-in-out;
+		transform: scale(0.6);
+		opacity: 0;
+		padding-bottom: @vr*4;
+
+		.toggle-in & {
+			//display: block;
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		.toggle-show & {
+			//display: block;
+		}
 	}
 }
 
 .toggle-body {
 	position: relative;
+}
+
+.toggle-handle {
+	position: relative;
+	z-index: 2;
 }

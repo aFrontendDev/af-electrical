@@ -9,21 +9,24 @@ published: false
         <h2 class="promo-box-title">{{title}}</h2>
         <div class="promo-box-header-media">
             <img src="{{headerImg}}" alt="{{headerImgAlt}}" />
-            <a href="#" class="helper toggle-handle">
-                {{{helper}}}
-            </a>
         </div>
     </header>
     <div class="promo-box-body toggle-content">
-        <p>
-            {{bodyText}}
-        </p>
-        {{#if bodyList}}
-        <ul>
-            {{#each bodyList}}
-            <li>{{item}}</li>
-            {{/each}}
-        </ul>
-        {{/if}}
+        <div class="toggle-content-inner">
+            <p>
+                {{bodyText}}
+            </p>
+            {{#if bodyList}}
+            <ul>
+                {{#each bodyList}}
+                <li>{{item}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </div>
     </div>
+    <a href="#" class="btn btn-style-a helper toggle-handle">
+        <span class="toggle-off-text">{{{helper.out}}} <i class="icon icon-arrow-down"></i></span>
+        <span class="toggle-in-text">{{{helper.in}}} <i class="icon icon-arrow-up"></i></span>
+    </a>
 </article>

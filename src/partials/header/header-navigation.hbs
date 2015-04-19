@@ -3,7 +3,12 @@ component: header-navigation
 hide: true
 published: false
 ---
-<nav class="navigation" id="navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+<div class="burger-menu">
+<a href="#"><i class="icon icon-menu"><b>Navigation Menu</b></i></a>
+</div>
+
+<nav class="header-nav navigation" id="navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 	<h4 class="navigation-title">Navigation</h4>
 	<ul class="navigation-menu menu-level-0">
 	{{#each navigation}}
@@ -22,13 +27,10 @@ published: false
 	    <a href="tel:07970123456">07970 123456</a>
 	</li>
 	<li>
-		<a href="#">Link A</a>
+		<a href="#">Contact</a>
 	</li>
 	<li>
-		<a href="#">Link B</a>
-	</li>
-	<li>
-		<a href="#">Link C</a>
+		<a href="#">Gallery of work</a>
 	</li>
 	</ul>
 </nav>
