@@ -20,18 +20,19 @@
 			]
 		},
 		"ctaBtn": {
-			"class": "btn-style-e toggle-handle",
+			"class": "btn-style-e toggle-handle toggle-proxy-target-a",
 			"text": "Get a quote"
 		},
 		"ctaToggle": true,
 		"ctaForm": {
-			"class": "form-horizontal form-style-b form-validate",
+			"class": "form-horizontal form-style-b form-validate scroll-to-element-a",
 			"id": "contact-form",
 			"name": "contact-form",
 			"action": "contact-submit.php",
+			"ajaxAction": "ajax-contact-submit.php",
 			"method": "post",
 			"ajax": true,
-			"submitBtnClass": "btn-style-a",
+			"submitBtnClass": "btn-style-a ajax-form-submit-btn",
 			"submitBtnText": "submit form",
 			"ajax": {
 				"success": {

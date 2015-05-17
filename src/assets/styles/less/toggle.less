@@ -38,10 +38,10 @@
 }
 
 .toggle-content {
-	overflow: hidden;
-	transition: height 100ms ease-in-out;
+	//transition: height 200ms ease-in-out;
 
 	.js & {
+		overflow: hidden;
 		height: 0;
 	}
 
@@ -53,10 +53,14 @@
 	}
 
 	.toggle-content-inner {
-		transition: transform 300ms, opacity 300ms, ease-in-out;
-		transform: scale(0.6);
-		opacity: 0;
-		padding-bottom: @vr*4;
+
+		.js & {
+			transition: transform 300ms, opacity 300ms, ease-in-out;
+			transform: scale(0.6);
+			opacity: 0;
+			padding-bottom: @vr*4;
+			//.clearfix();
+		}
 
 		.toggle-in & {
 			//display: block;

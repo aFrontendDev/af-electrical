@@ -440,6 +440,14 @@ module.exports = function(grunt) {
 					dest: '<%= config.dist %>/<%= config.distTemp %>/'
 				}]
 			},
+			phpfiles: {
+				files: [{
+					expand: true,
+					cwd: '<%= config.src %>/php/',
+					src: ['*.php'],
+					dest: '<%= config.dist %>/'
+				}]
+			},
 			scripts: {
 				files: [{
 					expand: true,
@@ -591,7 +599,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('build_html', [
 		'clean:html',
 		'assemble',
-		'copy:assets'
+		'copy:assets',
+		'copy:phpfiles'
 		]);
 	grunt.registerTask('build_scripts', [
 		'clean:scripts',

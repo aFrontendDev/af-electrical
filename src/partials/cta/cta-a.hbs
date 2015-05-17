@@ -36,7 +36,7 @@ published: false
             	{{#if ctaForm.ajax}}
             	<div class="ajax-form-area">
             	{{/if}}
-	                <form id="{{ctaForm.id}}" name="{{ctaForm.name}}" action="{{ctaForm.action}}" method="{{ctaForm.method}}">
+	                <form id="{{ctaForm.id}}" name="{{ctaForm.name}}" data-endpoint="{{ctaForm.ajaxAction}}" action="{{ctaForm.action}}" method="{{ctaForm.method}}">
 		               	<div class="control-group control-group-odd">
 		                	<div class="control-label">
 								<label for="name_input">Your name</label>
@@ -51,7 +51,7 @@ published: false
 								<label for="contact_number_input">Your number</label>
 							</div>
 							<div class="controls">
-								<input class="input-large" type="text" placeholder="e.g. 07970123456" id="contact_number_input" name="contact_number_input" data-val="true" data-val-required="Please enter a contact phone number" />
+								<input class="input-large" type="number" placeholder="e.g. 07970123456" id="contact_number_input" name="contact_number_input" data-val="true" data-val-required="Please enter a contact phone number" />
 								<span class="field-validation-message field-validation-valid" data-valmsg-for="contact_number_input" data-valmsg-replace="true"></span>
 							</div>
 						</div>
