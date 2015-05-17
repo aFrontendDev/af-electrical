@@ -95,22 +95,24 @@ published: false
 
 	        	{{#if ctaForm.ajax}}
 	            <div class="ajax-form-response ajax-form-success">
-	            	<h3 class="ajax-form-response-title">{{{ctaForm.ajax.success.title}}}</h3>
+	            	<h3 class="ajax-form-response-title">{{{ctaForm.ajax.success.title}}}
+		            	<span class="ajax-form-response-icon">
+		            		<i class="icon {{ctaForm.ajax.success.icon}}"></i>
+		            	</span>
+		            </h3>
 	            	<p>
 	            		{{{ctaForm.ajax.success.message}}}
 	            	</p>
-	            	<div class="ajax-form-response-icon">
-	            		<i class="icon {{ctaForm.ajax.success.icon}}"></i>
-	            	</div>
 	            </div>
 	            <div class="ajax-form-response ajax-form-error">
-	            	<h3 class="ajax-form-response-title">{{{ctaForm.ajax.error.title}}}</h3>
+	            	<h3 class="ajax-form-response-title">{{{ctaForm.ajax.error.title}}}
+		            	<span class="ajax-form-response-icon">
+		            		<i class="icon {{ctaForm.ajax.error.icon}}"></i>
+		            	</span>
+		            </h3>
 	            	<p>
 	            		{{{ctaForm.ajax.error.message}}}
 	            	</p>
-	            	<div class="ajax-form-response-icon">
-	            		<i class="icon {{ctaForm.ajax.error.icon}}"></i>
-	            	</div>
 	            </div>
 	            {{/if}}
 

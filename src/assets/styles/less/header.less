@@ -7,12 +7,14 @@
     border-bottom: @vr solid @brand-color-b;
     box-shadow: @box-shadow-b;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     .clearfix();
 
     & + .hero {
         margin-top: -@vr*4;
     }
+
+    .sidenav-in_content();
 }
 
 .header-inner {
@@ -129,5 +131,9 @@
 
     @media (min-width: @break-point-d) {
         display: none;
+    }
+
+    .icon {
+        font-size: 30px;
     }
 }

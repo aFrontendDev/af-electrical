@@ -1,0 +1,59 @@
+---
+component: sidenav
+hide: true
+published: false
+---
+<section class="sidenav" id="sidenav">
+	<header class="sidenav-header">
+		<h4 class="sidenav-title">Navigation</h4>
+		<a href="#page" class="action-menu">
+			<span class="action-inner">
+				<span class="action-label">Close Menu</span>
+				<span class="action-icon">
+					<i class="icon icon-x"></i>
+				</span>
+			</span>
+		</a>
+	</header>
+	<div class="sidenav-levels">
+		<div class="sidenav-levels-inner">
+			<div id="sidenav_level_0" class="sidenav-level sidenav-level-0" data-level="0">
+				{{!-- <ul class="sidenav-menu menu-level-0">
+				{{#each navigation-a}}
+					<li class="{{#if class}}{{class}}{{/if}} {{#is id ../activePageId}}active{{/is}}">
+						<a href="{{url}}" >{{{title}}} <i class="icon icon-arrow-right"></i></a>
+					</li>
+				{{/each}}
+				</ul> --}}{{!--
+				<ul class="sidenav-menu menu-level-0 list-unstyled">
+					<li>
+						<a href="#">Contact</a>
+					</li>
+					<li>
+						<a href="#">Gallery of work</a>
+					</li>
+				</ul> --}}
+				<div class="sidenav-contact-details">
+					<p>Get in touch by phone, email or by filling out my <a href="#">contact form</a></p>
+					<ul class="sidenav-menu menu-level-0 list-unstyled">
+						<li>
+							<a href="tel:01204123456">01204 123456</a>
+						</li>
+						<li>
+							<a href="tel:07970123456">07970 123456</a>
+						</li>
+						<li>
+							<a href="mailto:contact@af-electrical-services.co.uk">contact@af-electrical-services.co.uk</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+						<li>
+							<a href="#">Gallery of work</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

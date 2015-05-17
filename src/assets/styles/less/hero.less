@@ -2,8 +2,10 @@
 
 .hero {
     position: relative;
-    margin-bottom: @vr*4;
+    padding-bottom: @vr*4;
     box-shadow: @box-shadow-b;
+    z-index: 2;
+    background-color: @brand-color-e;
 
 	img {
 		display: block;
@@ -11,15 +13,18 @@
 		width: 100%;
 	}
 
+    .sidenav-in_content();
+
     .hero-header {
         width: 100%;
         text-align: center;
         padding: @vr*5 @ggw;
-        background: rgba(0,0,0,0.5);
+        background: rgba(119,119,119,1);
         color: #fff;
         font-family: @asap-medium;
 
         @media (min-width: @break-point-d) {
+            background: rgba(0,0,0,0.5);
             max-width: 600px;
             position: absolute;
             top: 50%;

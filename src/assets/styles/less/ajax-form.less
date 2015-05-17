@@ -5,7 +5,7 @@
 }
 
 .ajax-form-area {
-
+	margin-bottom: @vr*5;
 }
 
 .ajax-form-response {
@@ -22,9 +22,15 @@
 		opacity: 1;
 		transform: scale(1);
 	}
+
+	p {
+		margin-top: 0;
+	}
 }
 
 .ajax-form-response-title {
+	font-size: 30px;
+	line-height: @vr*6;
 
 	&.ajax-form-success-title {
 	}
@@ -37,4 +43,8 @@
 
 	&.ajax-form-error-icon {
 	}
+}
+
+.ajax-form-response-icon {
+	display: inline-block;
 }

@@ -16,6 +16,7 @@ var bb = bb ? bb : {};
 			ajaxFormContainerSelector : '.ajax-form',
 			// Misc
 			ajaxWait : null,
+			formSuccessWait : null,
 			/**
 			* Initialises ajax form module. Caches jQuery DOM objects.
 			* @function init
@@ -76,7 +77,13 @@ var bb = bb ? bb : {};
 								$.publish('ajaxLoaded');
 								var $formSuccess = $ajaxForm.find('.ajax-form-success');
 								if ($formSuccess.length > 0) {
-									$formSuccess.addClass('ajax-form-response-in');
+									$formSuccess.addClass('ajax-form-response-show');
+
+									clearTimeout(self.formSuccessWait);
+									self.formSuccessWait = setTimeout(function () {
+										$formSuccess.addClass('ajax-form-response-in');
+										clearTimeout(self.formSuccessWait);
+									}, 100);
 								}
 							},
 							error: function (xhr, textStatus) {

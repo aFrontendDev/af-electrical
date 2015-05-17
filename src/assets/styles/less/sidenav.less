@@ -1,0 +1,134 @@
+//sidenav.less
+
+.sidenav {
+	background: #eaebec;
+	overflow: hidden;
+	padding: @vr*4 @ggw/2;
+
+	.js & {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 275px;
+		display: none;
+	}
+
+	.sidenav-show & {
+		display: block;
+	}
+
+	// never show above @break-point-d
+	@media (min-width: @break-point-d) {
+		display: none !important;
+	}
+}
+
+.sidenav-title {
+	.visually-hidden();
+}
+
+.sidenav-header {
+	display: none;
+
+	.js & {
+		float: left;
+		width: 100%;
+		transition: box-shadow 400ms ease-in-out;
+		display: block;
+		margin-bottom: @vr*4;
+		//overflow: hidden;
+	}
+
+	.sidenav-scroll & {
+		box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	}
+
+	.action-menu {
+		float: right;
+		text-decoration: none;
+		//margin-left: 15px;
+		//padding: 0 15px;
+		//height: @vr*12;
+		color: @color-text;
+		text-align: right;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		//display: table; // TODO: add flexbox fallback
+
+		@media (min-width: @break-point-e) {
+			display: none;
+		}
+
+		.no-flexbox &,
+		.android_4_2 & {
+			display: table;
+		}
+
+		> span {
+
+			.no-flexbox &,
+			.android_4_2 & {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+
+		.action-label {
+			.visually-hidden;
+		}
+
+		.action-icon {
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 30px;
+
+			i {
+				font-style: normal;
+				display: block;
+				line-height: @vr*6;
+			}
+		}
+
+		.action-open {
+			display: table-cell;
+
+			.sidenav-in & {
+				display: none;
+			}
+		}
+
+		.action-close {
+			display: none;
+
+			.sidenav-in & {
+				display: table-cell;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			text-shadow: 0 0 10px rgba(255,255,255,1);
+		}
+	}
+}
+
+.sidenav-levels {
+	float: left;
+	width: 100%;
+}
+
+.sidenav-menu {
+
+	li {
+		margin-bottom: @vr;
+
+		a {
+			text-decoration: none;
+			color: @brand-color-d;
+		}
+	}
+}

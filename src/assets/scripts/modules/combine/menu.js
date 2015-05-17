@@ -13,7 +13,12 @@ var bb = bb ? bb : {};
 			// jQuery DOM caching
 			$handle : null,
 			// CSS selectors
-			menuInClass : 'menu-in',
+			menuInClass : 'sidenav-in',
+			menuShowClass : 'sidenav-show',
+			// Misc
+			openTimeout : null,
+			closeTimeout : null,
+			transitionSpeed: 300,
 			/**
 			* Initialises menu module. Caches jQuery DOM objects.
 			* @function init
@@ -38,7 +43,11 @@ var bb = bb ? bb : {};
 			*/
 			openMenu: function () {
 				var self = this;
-				bb.settings.$html.addClass(self.menuInClass);
+				bb.settings.$html.addClass(self.menuShowClass);
+				self.openTimeout = setTimeout( function () {
+					bb.settings.$html.addClass(self.menuInClass);
+					clearTimeout(self.openTimeout);
+				}, 30);
 			},
 			/**
 			* Removes CSS class from <html>, hiding menu.
@@ -48,6 +57,10 @@ var bb = bb ? bb : {};
 			closeMenu: function () {
 				var self = this;
 				bb.settings.$html.removeClass(self.menuInClass);
+				self.closeTimeout = setTimeout( function () {
+					bb.settings.$html.removeClass(self.menuShowClass);
+					clearTimeout(self.closeTimeout);
+				}, self.transitionSpeed + 10);
 			}
 		}
 	});
