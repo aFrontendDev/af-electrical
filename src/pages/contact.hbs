@@ -1,0 +1,81 @@
+---
+title: Contact
+visibleGrid: false
+visibleBreakpoints: true
+heroTopB: true
+---
+{{#extend "layout-a"}}
+    {{#content "sections-top"}}
+    {{/content}}
+
+	{{#content "region-a"}}
+
+    <section class="promo-container">
+        <header class="promo-container-header visually-hidden">
+            <h2>Contact options</h2>
+        </header>
+
+        <article class="promo promo-style-a block block-size-c">
+            <header class="promo-header">
+                <h3 class="promo-title">
+                    Give me a call
+                </h3>
+                <span class="promo-icon">
+                    <i class="icon icon-phone"><b>phone</b></i>
+                </span>
+            </header>
+            <div class="promo-body">
+                <p>Feel free to get in touch if you have any questions about the services I offer and to dicuss your requirements.</p>
+                <p>
+                    <a href="tel:01204123456" class="btn btn-style-e">01204 123456</a>
+                </p>
+                <p>
+                    <a href="tel:07970123456" class="btn btn-style-e">07970 123456</a>
+                </p>
+            </div>
+        </article>
+
+        <article class="promo promo-style-a block block-size-c">
+            <header class="promo-header">
+                <h3 class="promo-title">
+                    Send me an email
+                </h3>
+                <span class="promo-icon">
+                    <i class="icon icon-email"><b>email</b></i>
+                </span>
+            </header>
+            <div class="promo-body">
+                <p>Don't have time to call me now? Send me an email and I'll get reply as quickly as I can.</p>
+                <p>
+                    <a href="mailto:contact@af-electrical-services.co.uk" class="btn btn-style-e">email me</a>
+                </p>
+            </div>
+        </article>
+
+        <article class="promo promo-style-a block block-size-c">
+            <header class="promo-header">
+                <h3 class="promo-title">
+                    Use my contact form
+                </h3>
+                <span class="promo-icon">
+                    <i class="icon icon-speech"><b>speech bubble</b></i>
+                </span>
+            </header>
+            <div class="promo-body">
+                <p>Why not get in touch using my contact form below, leave a number or email address and I'll be in touch soon!</p>
+                <p>
+                    <a href="#" class="btn btn-style-e scroll-to-target-btn" data-scroll-to-target-element=".scroll-to-element-a">Get a touch <i class="icon icon-arrow-down"></i></a>
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <section class="contact-form-section block block-size-f">
+        <header class="contact-form-section-header">
+            <h3 class="contact-form-section-title">Contact form</h3>
+        </header>
+        {{>contact-form-a}}
+    </section>
+
+	{{/content}}
+{{/extend}}

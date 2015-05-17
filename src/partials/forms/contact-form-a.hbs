@@ -1,0 +1,90 @@
+---
+component: contact-form-a
+published: false
+---
+
+<div class="contact-form form ajax-form form-horizontal form-style-b form-validate scroll-to-element-a">
+
+	<div class="ajax-form-area">
+
+        <form id="contact-form" name="contact-form" data-endpoint="ajax-contact-submit.php" action="contact-submit.php" method="post">
+           	<div class="control-group control-group-odd">
+            	<div class="control-label">
+					<label for="name_input">Your name</label>
+				</div>
+				<div class="controls">
+					<input class="input-large" type="text" placeholder="e.g. John Smith" id="name_input" name="name_input" data-val="true" data-val-required="Please enter your name" />
+					<span class="field-validation-message field-validation-valid" data-valmsg-for="name_input" data-valmsg-replace="true"></span>
+				</div>
+			</div>
+			<div class="control-group control-group-even">
+            	<div class="control-label">
+					<label for="contact_number_input">Your number</label>
+				</div>
+				<div class="controls">
+					<input class="input-large" type="number" placeholder="e.g. 07970123456" id="contact_number_input" name="contact_number_input" data-val="true" data-val-required="Please enter a contact phone number" />
+					<span class="field-validation-message field-validation-valid" data-valmsg-for="contact_number_input" data-valmsg-replace="true"></span>
+				</div>
+			</div>
+			<div class="control-group control-group-odd">
+            	<div class="control-label">
+					<label for="contact_email_input">Your email (optional)</label>
+				</div>
+				<div class="controls">
+					<input class="input-large" type="text" placeholder="e.g. johnsmith@gmail.com" id="contact_email_input" name="contact_email_input" />
+				</div>
+			</div>
+			<div class="control-group control-group-even">
+				<div class="control-label">
+					<label for="contact_service_select">Type of service required</label>
+				</div>
+				<div class="controls">
+					<select class="input-large" name="contact_service_select" id="contact_service_select" data-val="true" data-val-required="Please select the type of service you require">
+						<option value="">Please select an option&hellip;</option>
+						<option value="commercial">Commercial</option>
+						<option value="domestic">Domestic</option>
+					</select>
+					<span class="field-validation-message field-validation-valid" data-valmsg-for="contact_service_select" data-valmsg-replace="true"></span>
+				</div>
+			</div>
+			<div class="control-group control-group-odd">
+				<div class="control-label">
+					<label for="contact_service_info_text">Tell me about the work you require</label>
+				</div>
+				<div class="controls">
+					<textarea class="input-xxxlarge" id="contact_service_info_text" name="contact_service_info_text" rows="3" cols="10" data-val="true" data-val-required="Please give me a little information on the work you need to be done"></textarea>
+					<span class="field-validation-message field-validation-valid" data-valmsg-for="contact_service_info_text" data-valmsg-replace="true"></span>
+				</div>
+			</div>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-style-a ajax-form-submit-btn">submit form</button>
+			</div>
+        </form>
+
+	</div>
+
+
+
+    <div class="ajax-form-response ajax-form-success">
+    	<h3 class="ajax-form-response-title">Message sent!
+        	<span class="ajax-form-response-icon">
+        		<i class="icon icon-check"></i>
+        	</span>
+        </h3>
+    	<p>
+    		Thanks for getting in touch, I'll be in contact soon
+    	</p>
+    </div>
+    <div class="ajax-form-response ajax-form-error">
+    	<h3 class="ajax-form-response-title">Something went wrong
+        	<span class="ajax-form-response-icon">
+        		<i class="icon icon-x"></i>
+        	</span>
+        </h3>
+    	<p>
+    		Sorry! There's been a problem at our end and your form hasn't been sent, please try again or get in touch via phone or email.
+    	</p>
+    </div>
+
+
+</div>

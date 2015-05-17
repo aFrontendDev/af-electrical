@@ -62,3 +62,48 @@
     width: 100%;
     text-align: center;
 }
+
+.promo-container {
+
+    @media (min-width: @break-point-d) {
+        display: flex;
+    }
+}
+
+.promo {
+
+    &.promo-style-a {
+        background-color: #fff;
+        box-shadow: @box-shadow-c;
+        padding: @vr*4 @ggw;
+    }
+}
+
+.promo-header {
+
+}
+
+.promo-title {
+    font-size: 30px;
+    line-height: @vr*7;
+    color: @brand-color-d;
+    text-align: center;
+}
+
+.promo-icon {
+    display: block;
+    text-align: center;
+
+    .icon {
+        font-size: 50px;
+        color: @brand-color-d;
+    }
+}
+
+.promo-body {
+    text-align: center;
+
+    .btn {
+
+    }
+}
