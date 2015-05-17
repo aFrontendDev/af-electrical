@@ -1,0 +1,43 @@
+---
+title: Gallery
+visibleGrid: false
+visibleBreakpoints: true
+heroTopC: true
+---
+{{#extend "layout-a"}}
+    {{#content "sections-top"}}
+    {{/content}}
+
+	{{#content "region-a"}}
+
+    <section class="gallery">
+        <header class="gallery-header visually-hidden">
+            <h2 class="gallery-title">Gallery of work</h2>
+        </header>
+        <div class="gallery-thumbs">
+            <div class="block block-size-c">
+                <a href="#" class="action-gallery-thumb" data-gallery-full-img="temp/1600x900.gif">
+                    <figure class="gallery-thumb">
+                        <img src="temp/1600x900.gif" />
+                    </figure>
+                </a>
+            </div>
+            <div class="block block-size-c">
+                <a href="#" class="action-gallery-thumb" data-gallery-full-img="temp/1600x900.gif">
+                    <figure class="gallery-thumb">
+                        <img src="temp/1600x900.gif" />
+                    </figure>
+                </a>
+            </div>
+            <div class="block block-size-c">
+                <a href="#" class="action-gallery-thumb" data-gallery-full-img="temp/1600x900.gif">
+                    <figure class="gallery-thumb">
+                        <img src="temp/1600x900.gif" />
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+
+	{{/content}}
+{{/extend}}

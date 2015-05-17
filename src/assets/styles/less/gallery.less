@@ -1,0 +1,65 @@
+//gallery.less
+
+.gallery {
+
+}
+
+.gallery-header {
+
+}
+
+.gallery-title {
+
+}
+
+.gallery-thumbs {
+
+}
+
+.gallery-thumb {
+
+	img {
+		width: auto;
+		max-width: 100%;
+	}
+}
+
+.full-img-container {
+	position: fixed;
+	top: 15px;
+	bottom: 15px;
+	overflow: auto;
+	z-index: 9999;
+	width: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+
+	.thumb-overlay-show & {
+		display: block;
+	}
+
+	img {
+		width: auto;
+		max-width: 100%;
+		opacity: 0;
+		transform: scale(0.6);
+		transition: all 300ms ease-in-out;
+
+		.thumb-overlay-in & {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
+
+.action-full-img-close {
+	float: right;
+	margin: 10px;
+	text-decoration: none;
+
+	.icon {
+		font-size: 30px;
+		color: #fff;
+	}
+}
