@@ -1,6 +1,6 @@
 <?PHP
   // form handler
-    $to = "blackledge22@gmail.com, a.blackledge@building-blocks.com";
+    $to = "contact@af-electrical-services.co.uk";
     $from = $_REQUEST['contact_email_input'];
     $name = $_REQUEST['name_input'];
     $headers = "From: $from";
