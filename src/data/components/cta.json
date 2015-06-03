@@ -2,26 +2,22 @@
 	"ctaHomepage": {
 		"class": "cta-style-a toggle block block-size-f",
 		"title": "Get in touch",
-		"bodyCopy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"bodyCopy": "Why not get in touch using my contact form below, leave a number or email address and I'll be in touch soon! Alternatively give me a call or send me an email directly.",
 		"detailLinks": {
 			"link": [
 				{
-					"href": "tel:01204123456",
-					"text": "01204 123456"
+					"href": "tel:07444381663",
+					"text": "07444 381663"
 				},
 				{
-					"href": "tel:07970123456",
-					"text": "07970 123456"
-				},
-				{
-					"href": "mailto:email@email.com",
-					"text": "email@email.com"
+					"href": "mailto:contact@af-electrical-services.co.uk",
+					"text": "contact@af-electrical-services.co.uk"
 				}
 			]
 		},
 		"ctaBtn": {
 			"class": "btn-style-e toggle-handle toggle-proxy-target-a",
-			"text": "Get a quote"
+			"text": "Get in touch (click me)"
 		},
 		"ctaToggle": true,
 		"ctaForm": {

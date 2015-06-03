@@ -62,10 +62,19 @@
         vertical-align: middle;
         max-height: 30px;
         margin-right: @ggw/3;
+        margin-bottom: @vr;
 
         @media (min-width: @break-point-d) {
             max-height: 50px;
             margin-right: @ggw/2;
+        }
+    }
+
+    .header-logo-text {
+        display: block;
+
+        @media (min-width: @break-point-c) {
+            display: inline-block;
         }
     }
 }

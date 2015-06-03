@@ -3,30 +3,39 @@
         "class": "promo-box-style-a promo-box-color-a block block-size-e",
         "title": "Domestic Services",
         "headerImg": "temp/domestic.jpg",
-        "headerImgAlt": "alt text",
+        "headerImgAlt": "domestic electrical services",
         "helper": {
             "out": "Click to reveal more info",
             "in": "Click to hide info"
         },
-        "bodyText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bodyText": "I am able to offer multiple different electrical services for domestic work in your home. Here are just some of the services I offer:",
         "bodyList": [
             {
-                "item": "List item 1"
+                "item": "Complete/partial re-wires"
             },
             {
-                "item": "List item 2"
+                "item": "Fuse box upgrades"
             },
             {
-                "item": "List item 3"
+                "item": "Periodic condition reports"
             },
             {
-                "item": "List item 4"
+                "item": "Fault finding"
             },
             {
-                "item": "List item 5"
+                "item": "Landlords safety certification"
             },
             {
-                "item": "List item 6"
+                "item": "Outside lighting/power"
+            },
+            {
+                "item": "Power to garages/sheds"
+            },
+            {
+                "item": "Telephone lines"
+            },
+            {
+                "item": "Intruder alarms"
             }
         ]
     },
@@ -34,30 +43,30 @@
         "class": "promo-box-style-a promo-box-color-b block block-size-e",
         "title": "Commercial Services",
         "headerImg": "temp/commercial.jpg",
-        "headerImgAlt": "alt text",
+        "headerImgAlt": "Commercial electrical services",
         "helper": {
             "out": "Click to reveal more info",
             "in": "Click to hide info"
         },
-        "bodyText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bodyText": "I have extensive experience in commercial electrical work and am available to take on work in this area. Here are some of the types of work I can undertake",
         "bodyList": [
             {
-                "item": "List item 1"
+                "item": "Electrical condition reports"
             },
             {
-                "item": "List item 2"
+                "item": "Fire alarm installation"
             },
             {
-                "item": "List item 3"
+                "item": "All aspects of electrical containment"
             },
             {
-                "item": "List item 4"
+                "item": "Fault finding"
             },
             {
-                "item": "List item 5"
+                "item": "Telephone lines"
             },
             {
-                "item": "List item 6"
+                "item": "Intruder alarms"
             }
         ]
     }

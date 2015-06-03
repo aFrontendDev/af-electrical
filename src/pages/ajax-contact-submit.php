@@ -50,7 +50,7 @@
 
 <?php
 
-    $to = "blackledge22@gmail.com";
+    $to = "contact@af-electrical-services.co.uk, blackledge22@gmail.com";
     $from = $_REQUEST['contact_email_input'];
     $name = $_REQUEST['name_input'];
     $headers = "From: $from";
