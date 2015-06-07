@@ -40,7 +40,16 @@ var bb = bb ? bb : {};
 					}
 
 					var $form = $ajaxForm.find('form');
-					self.submitForm($form, $ajaxForm);
+
+					if ($form.length < 1) {
+						return;
+					}
+
+					if ($form.valid()) {
+						self.submitForm($form, $ajaxForm);
+					} else {
+						console.log('invalid form');
+					}
 				});
 			},
 			/**
