@@ -497,7 +497,7 @@ module.exports = function(grunt) {
 		modernizr: {
 			dist: {
 				'devFile': '<%= config.bower %>/modernizr/modernizr.js',
-				'outputFile': '<%= config.dist %>/<%= config.distScripts %>/modernizr.js',
+				'dest': '<%= config.dist %>/<%= config.distScripts %>/modernizr.js',
 				'parseFiles': true,
 				'files': {
 					'src': [

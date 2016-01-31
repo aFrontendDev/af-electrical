@@ -32,3 +32,4 @@ dist
 src/assets/styles/less/_mixins/_combined.less
 backup
 deploy
+_node_modules
