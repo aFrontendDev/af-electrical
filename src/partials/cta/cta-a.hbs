@@ -16,7 +16,11 @@ published: false
             {{#if detailLinks}}
             <div class="cta-detail-links">
             	{{#each detailLinks.link}}
-	            <a href="{{href}}">{{{text}}}</a><span class="seperator"> | </span>
+	            	{{#if phone}}
+	            	<a href="{{project.phoneSingle}}">{{project.phone}}</a><span class="seperator"> | </span>
+	            	{{else}}
+		            <a href="{{href}}">{{{text}}}</a><span class="seperator"> | </span>
+		            {{/if}}
 	            {{/each}}
 	        </div>
 	        {{/if}}
