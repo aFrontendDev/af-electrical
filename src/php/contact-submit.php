@@ -1,7 +1,8 @@
 
 <?PHP
   // form handler
-    $to = "blackledge22@gmail.com, a.blackledge@building-blocks.com";
+    //$to = "blackledge22@gmail.com, a.blackledge@building-blocks.com";
+    $to = "contact@af-electrical-services.co.uk";
     $from = $_REQUEST['contact_email_input'];
     $name = $_REQUEST['name_input'];
     $headers = "From: $from";
@@ -24,12 +25,12 @@
 
     //$send = mail($to, $subject, $body, $headers);
 
-	if (filter_var($from, FILTER_VALIDATE_EMAIL)) { // this line checks that we have a valid email address
-		mail($to, $subject, $body) or die('Error sending Mail'); //This method sends the mail.
-		echo "Your email was sent!"; // success message
-	} else {
-		echo "There was a problem at our end or your email address was not valid"; // failure message
-	}
+    if (empty($_POST["name_input"]) || empty($_POST["contact_number_input"]) || empty($_POST["contact_service_select"]) || empty($_POST["contact_service_info_text"]) ) {
+      echo "There was a problem at our end or your required fields were empty"; // failure message
+    } else {
+  		mail($to, $subject, $body) or die('Error sending Mail'); //This method sends the mail.
+  		echo "Your email was sent! Thankyou"; // success message
+    }
 ?>
 
 <a href="/">Back to AF Electrical Services</a>

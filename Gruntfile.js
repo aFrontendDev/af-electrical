@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 			},
 			html: {
 				files: [
-				'<%= config.src %>/{data,pages,partials,layouts}/**/*.{<%= config.assembleExt %>,json}'
+				'<%= config.src %>/{data,pages,partials,layouts,php}/**/*.{<%= config.assembleExt %>,json,php}'
 				],
 				tasks: [
 				'build_html'
